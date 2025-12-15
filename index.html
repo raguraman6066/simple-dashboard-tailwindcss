@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Dashboard</title>
+    <!-- play cdn in tailwindcss.com  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <!-- header  -->
+    <header
+      class="flex justify-between p-4 bg-white dark:bg-gray-800 shadow-md"
+    >
+      <div class="text-xl font-bold text-gray-800 dark:text-gray-200">
+        My Dashboard
+      </div>
+      <nav class="hidden md:block space-x-4">
+        <a href="" class="hover:text-indigo-500">Home</a>
+        <a href="" class="hover:text-indigo-500">Dashboard</a>
+        <a href="" class="hover:text-indigo-500">Profile</a>
+        <a href="" class="hover:text-indigo-500">Settings</a>
+      </nav>
+    </header>
+
+    <div class="flex">
+      <!-- aside and main  -->
+      <aside
+        class="hidden md:flex md:flex-col w-64 bg-gray-100 dark:bg-gray-800 p-4 space-y-4 h-screen"
+      >
+        <a href="">Dashboard</a>
+        <a href="">Analytic</a>
+        <a href="">Projects</a>
+        <a href="">Settings</a>
+      </aside>
+
+      <main class="p-4 w-full">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-fit mx-auto"
+        >
+          <div
+            class="p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg hover:shadow-xl transition bg-gradient-to-br from-indigo-500 to-indigo-400"
+          >
+            <div class="text-sm font-semibold text-white dark:text-gray-800">
+              Users
+            </div>
+            <div class="mt-2 text-2xl font-bold text-white dark:text-gray-400">
+              $1,235
+            </div>
+          </div>
+          <div
+            class="p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg hover:shadow-xl transition bg-gradient-to-br from-red-500 to-red-400"
+          >
+            <div class="text-sm font-semibold text-white dark:text-gray-800">
+              Revenue
+            </div>
+            <div class="mt-2 text-2xl font-bold text-white dark:text-gray-400">
+              $12,250
+            </div>
+          </div>
+          <div
+            class="p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg hover:shadow-xl transition bg-gradient-to-br from-yellow-500 to-yellow-400"
+          >
+            <div class="text-sm font-semibold text-white dark:text-gray-800">
+              Orders
+            </div>
+            <div class="mt-2 text-2xl font-bold text-white dark:text-gray-400">
+              205
+            </div>
+          </div>
+          <div
+            class="p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg hover:shadow-xl transition bg-gradient-to-br from-green-500 to-green-400"
+          >
+            <div class="text-sm font-semibold text-white dark:text-gray-800">
+              Feedback
+            </div>
+            <div class="mt-2 text-2xl font-bold text-white dark:text-gray-400">
+              87
+            </div>
+          </div>
+        </div>
+
+        <!-- table  -->
+        <div class="mt-6">
+          <!-- explicitly tell min-w-full -->
+          <table
+            class="min-w-full bg-white dark:bg-gray-800 rounded-lg shadow-md"
+          >
+            <thead>
+              <!-- padding only in td or th not in tr -->
+              <tr
+                class="text-left border-b border-gray-200 dark:border-gray-700"
+              >
+                <th class="p-3 text-gray-700 dark:text-gray-300">Order Id</th>
+                <th class="p-3 text-gray-700 dark:text-gray-300">Customer</th>
+                <th class="p-3 text-gray-700 dark:text-gray-300">Status</th>
+                <th class="p-3 text-gray-700 dark:text-gray-300">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="odd:bg-gray-50 even:bg-white border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-500"
+              >
+                <td class="p-3">#001</td>
+                <td class="p-3">John Doe</td>
+                <td class="p-3">
+                  <span
+                    class="px-2 py-1 text-xs font-semibold bg-green-100 text-green-700 rounded-full"
+                    >Completed</span
+                  >
+                </td>
+                <td class="p-3">$123</td>
+              </tr>
+              <tr
+                class="odd:bg-gray-50 even:bg-white border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-500"
+              >
+                <td class="p-3">#002</td>
+                <td class="p-3">Jane</td>
+                <td class="p-3">
+                  <span
+                    class="px-2 py-1 text-xs font-semibold bg-yellow-100 text-yellow-700 rounded-full"
+                    >Pending</span
+                  >
+                </td>
+                <td class="p-3">$400</td>
+              </tr>
+              <tr
+                class="odd:bg-gray-50 even:bg-white border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-500"
+              >
+                <td class="p-3">#003</td>
+                <td class="p-3">Alice Lee</td>
+                <td class="p-3">
+                  <span
+                    class="px-2 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded-full"
+                    >Processing</span
+                  >
+                </td>
+                <td class="p-3">$300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <!-- footer -->
+    <footer
+      class="flex flex-col items-center md:flex-row justify-between p-4 bg-white dark:bg-gray-800 shadow-inner"
+    >
+      <div class="text-gray-600 dark:text-gray-300 text-sm">
+        @2025 Dashboard. All Rights Reserved.
+      </div>
+      <div class="flex space-x-2">
+        <a href="" class="text-indigo-500">Privacy</a>
+        <a href="" class="text-indigo-500">Terms</a>
+        <a href="" class="text-indigo-500">contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
